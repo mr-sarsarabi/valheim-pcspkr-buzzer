@@ -1,0 +1,30 @@
+server:
+  container_name: "valheim-server"
+  log_source: "docker" # "docker" (container logs) or "file" (local file path)
+  log_file_path: ""
+
+driver:
+  mode: "auto" # "auto", "linux_evdev", "linux_console", "windows_beep"
+  device_path: "" # Leave empty for auto-detecting PC Speaker event device on Linux
+
+sound_pack: "mario" # Options: "mario", "zelda", "arcade", "meme"
+
+events:
+  server_start:
+    enabled: true
+    cooldown_seconds: 15
+  player_join:
+    enabled: true
+    cooldown_seconds: 5
+  player_leave:
+    enabled: false
+    cooldown_seconds: 5
+  player_death:
+    enabled: true
+    cooldown_seconds: 5
+  raid_start:
+    enabled: true
+    cooldown_seconds: 20
+  boss_spawn:
+    enabled: true
+    cooldown_seconds: 20

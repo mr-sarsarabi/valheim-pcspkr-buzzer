@@ -1,0 +1,13 @@
+services:
+  valheim-buzzer:
+    build: .
+    image: valheim-buzzer:latest
+    container_name: valheim-buzzer
+    restart: unless-stopped
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - /usr/bin/docker:/usr/bin/docker:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    devices:
+      # Pass through the PC speaker event device (adjust if different on your host)
+      - /dev/input/event13:/dev/input/event13
