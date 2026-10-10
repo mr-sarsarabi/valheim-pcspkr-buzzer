@@ -13,6 +13,10 @@
 Because Discord webhooks are boring, and physical server beeps are legendary.  
 When a friend connects to your Valheim world, your server greets them with the **Super Mario Overworld Theme**. When someone gets crushed by a falling tree or a troll, your server plays **Mario Death** or **Coffin Dance**. When a raid begins or a boss is summoned, an emergency 8-bit siren alerts everyone in the room!
 
+> ⚠️ **Who is this for?**  
+> This project is built specifically for **homelab enthusiasts, self-hosters, and server administrators who run a Valheim dedicated server on physical bare-metal hardware** (such as a local home server, spare PC, or rackmount unit) that has an actual motherboard buzzer / PC speaker (`pcspkr`).  
+> **It is NOT an in-game client mod for players**, nor is it meant for cloud VPS instances that lack physical audio transducers.
+
 ---
 
 ## ✨ Features
@@ -57,8 +61,8 @@ If you already run Valheim in Docker (e.g., `lloesche/valheim-server`):
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/valheim-motherboard-buzzer.git
-   cd valheim-motherboard-buzzer
+   git clone https://github.com/mr-sarsarabi/valheim-pcspkr-buzzer.git
+   cd valheim-pcspkr-buzzer
    ```
 
 2. **Verify your speaker device (Linux):**
