@@ -48,10 +48,10 @@ EVENT_REGEXES = [
         "player_leave",
         re.compile(r"(?:Closing socket|Destroying peer)\s*([0-9]+)", re.IGNORECASE)
     ),
-    # 6. Server lifecycle ready
+    # 6. Server lifecycle ready (only on true boot, NOT Steam network reconnects)
     (
         "server_start",
-        re.compile(r"(?:Game server connected|DungeonDB Start done)", re.IGNORECASE)
+        re.compile(r"DungeonDB Start done", re.IGNORECASE)
     ),
 ]
 

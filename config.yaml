@@ -11,7 +11,7 @@ sound_pack: "mario" # Options: "mario", "zelda", "arcade", "meme"
 
 events:
   server_start:
-    enabled: true
+    enabled: false
     cooldown_seconds: 15
   player_join:
     enabled: true
